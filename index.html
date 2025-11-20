@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome to Pyride Labs Alpine Package Repository</title>
+  <style>
+    :root {
+      --bg: #121212;
+      --card: #1f2937;
+      --accent: #7dd3fc;
+      --button-bg: #60a5fa;
+      --text-color: #e6eef8;
+      --glass: rgba(255, 255, 255, 0.08);
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(circle at 10% 10%, rgba(125, 211, 252, 0.06), transparent 10%), var(--bg);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a:link, a:visited, a:hover, a:active {
+      text-decoration: none;
+      color: inherit; /* This makes the link inherit the text color of its parent element */
+    }
+    .wrap {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 860px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      border-radius: 16px;
+      padding: 36px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .row {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero {
+      flex: 1;
+    }
+
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: clamp(28px, 4.4vw, 48px);
+      letter-spacing: -0.02em;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    p.lead {
+      margin: 0 0 18px 0;
+      opacity: 0.9;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      background: linear-gradient(90deg, var(--accent), #60a5fa);
+      color: #04263b;
+      box-shadow: 0 6px 18px rgba(125, 211, 252, 0.12);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    .btn:active {
+      background-color: #388e3c;
+    }
+
+    .dino {
+      width: 220px;
+      flex-shrink: 0;
+    }
+
+    footer {
+      margin-top: 18px;
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    /* Small animation for fadeIn */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mobile view */
+    @media (max-width: 720px) {
+      .row {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+
+      .dino {
+        width: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <main class="card" role="main">
+      <div class="row">
+        <div class="hero">
+          <h1>Welcome to <em>Pyride Labs Alpine Package Repository</em></h1>
+          <p class="lead">Here we host our custom build and maintained raw .apk packages for <b>Alpine Systems</b><br><br>
+          
+            Branches: <br>
+            - main<br>
+            - community
+          </p>
+          <a class="btn" href="https://pyridelabs.github.io/pkg-repo-fs/" target="_blank">Browse Package Repository</a>
+          <footer>For More information contact: <a href="mailto:devteam@pyridelabs.in">devteam@pyridelabs.in</a></footer>
+        </div>
+        <div class="dino" aria-hidden="true">
+          <!-- Friendly Dino SVG -->
+          <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" width="100%">
+            <g transform="translate(0,8)">
+              <ellipse cx="48" cy="96" rx="44" ry="14" fill="rgba(0,0,0,0.25)" />
+              <g transform="translate(10,0)">
+                <path d="M20 80 C10 80 8 60 18 56 C30 52 44 52 62 58 C78 63 92 64 108 56 C116 52 128 46 146 46 C162 46 172 56 172 72 C172 84 162 92 150 96" fill="#4ade80" stroke="#166534" stroke-width="2"/>
+                <circle cx="48" cy="46" r="10" fill="#065f46" />
+                <circle cx="54" cy="44" r="2" fill="#061618" />
+                <path d="M18 56 C4 48 0 34 16 30 C24 28 36 28 46 30" stroke="#166534" stroke-width="3" fill="none"/>
+                <!-- Spikes -->
+                <path d="M18 36 L10 24 L18 20" fill="#86efac" stroke="#166534" stroke-width="1"/>
+                <path d="M36 34 L28 22 L36 18" fill="#86efac" stroke="#166534" stroke-width="1"/>
+                <path d="M60 36 L52 24 L60 20" fill="#86efac" stroke="#166534" stroke-width="1"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
